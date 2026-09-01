@@ -1,0 +1,19 @@
+name: DwarvenCore
+version: 1.0.0
+main: org.examplee.dvarf.DwarvenCorePlugin
+api-version: '1.21'
+authors: [ "codex" ]
+description: Dwarf race mechanics for Purpur 1.21.x
+
+commands:
+  dwarf:
+    description: Main command for dwarf race and custom items
+    usage: /dwarf <race|remove|give|reload|menu|stage|seismic>
+    permission: dwarvencore.admin
+  dmenu:
+    description: Open dwarf progress menu
+    usage: /dmenu
+
+permissions:
+  dwarvencore.admin:
+    default: op

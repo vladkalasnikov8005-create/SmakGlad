@@ -1,0 +1,20 @@
+# Main tuning values for DwarvenCore.
+chances:
+  skilled_hands_ore_double: 0.20
+  snot_drop_every_roll: 0.05
+  ore_shield_slow_on_block: 0.10
+
+timers:
+  surface_suffocation_seconds: 3600
+  zero_hunger_death_ticks: 2400
+  sky_hunger_interval_seconds: 10
+  snot_roll_ticks: 6000
+  snot_guaranteed_ticks: 36000
+  mountain_elixir_seconds: 120
+
+values:
+  sky_hunger_loss: 2
+  mining_extra_exhaustion: 0.005
+  ore_shield_damage_multiplier: 0.20
+  fall_damage_multiplier: 0.70
+  furnace_regen_radius: 3
