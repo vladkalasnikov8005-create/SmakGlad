@@ -1,0 +1,74 @@
+vampire:
+  max-blood: 100
+  blood-drain-per-minute: 0.0
+  blood-from-food: 3.0
+  leader-aura-radius: 10
+  villagers-fear-radius: 10
+  villagers-fear-force: 0.35
+  hunger-drain-per-minute: 0.1
+  fist-damage-multiplier: 3.0
+  sun-damage-scale: 1.0
+  max-level: 10
+  blood-per-level: 100
+
+abilities:
+  dash:
+    distance: 10
+    cooldown-seconds: 5
+  bat:
+    duration-seconds: 30
+    cooldown-seconds: 680
+  wolf:
+    count: 3
+    duration-seconds: 20
+    cooldown-seconds: 120
+  vision:
+    duration-seconds: 10
+    radius: 20
+    cooldown-seconds: 30
+  bloodcutter:
+    cooldown-seconds: 35
+    blood-cost: 15
+  bloodblades:
+    cooldown-seconds: 12
+    blood-cost: 10
+  bloodmist:
+    cooldown-seconds: 600
+    blood-cost: 50
+  bloodshield:
+    cooldown-seconds: 50
+    duration-seconds: 12
+    shield-hp: 12
+    blood-cost: 20
+  bloodmine:
+    cooldown-seconds: 45
+    blood-cost: 20
+  bloodheal:
+    cooldown-seconds: 30
+    blood-cost: 50
+  shadowveil:
+    cooldown-seconds: 90
+    blood-cost: 45
+    duration-seconds: 12
+    radius: 10
+  bite:
+    cooldown-seconds: 2
+    range: 5
+    blood-gain-mob: 10
+    blood-gain-player: 20
+    hunger-gain-mob: 2
+    hunger-gain-player: 4
+    heal-amount: 4.0
+
+garlicness:
+  table-chance: 0.02
+  level-1:
+    radius: 3
+  level-2:
+    radius: 5
+  level-3:
+    radius: 7
+
+items:
+  trume-hat:
+    sun-seconds: 3600

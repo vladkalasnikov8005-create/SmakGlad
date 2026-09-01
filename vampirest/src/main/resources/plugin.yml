@@ -1,0 +1,21 @@
+name: VampireRace
+version: 2.0.0
+main: org.examplee.vampirest.VampireRacePlugin
+api-version: '1.21'
+author: examplee
+softdepend:
+  - PlaceholderAPI
+commands:
+  vampire:
+    description: Основная команда вампиров
+    usage: /vampire help
+permissions:
+  vampire.become:
+    description: Разрешает стать вампиром через команду
+    default: op
+  vampire.give:
+    description: Разрешает выдачу вампирских предметов
+    default: op
+  vampire.admin:
+    description: Админ-команды вампира
+    default: op
