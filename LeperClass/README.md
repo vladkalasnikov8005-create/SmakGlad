@@ -37,6 +37,15 @@ gradlew.bat build      # Windows
 
 Результат: `build/libs/LeperClass.jar` — кладётся в `plugins/` сервера Paper 1.21.x.
 
+Тестовый сервер (Paper 1.21.1, плагин run-paper):
+
+```bash
+./gradlew runServer
+```
+
+Сервер стартует в папке `run/`. Если `../PalePlugin/build/libs/PalePlugin.jar`
+уже собран — он подхватится автоматически (связка Leper → Pale через `PaleHook`).
+
 ## Настройки
 
 `config.yml` в корне плагина (выдаётся в jar): балансы, кулдауны чиха, инверсия зелий,

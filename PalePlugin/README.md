@@ -39,6 +39,15 @@ gradlew.bat build      # Windows
 
 Результат: `build/libs/PalePlugin.jar` — кладётся в `plugins/` сервера Paper 1.21.x.
 
+Тестовый сервер (Paper 1.21.1, плагин run-paper):
+
+```bash
+./gradlew runServer
+```
+
+Сервер стартует в папке `run/`. Если `../LeperClass/build/libs/LeperClass.jar`
+уже собран — он подхватится автоматически (softdepend в обе стороны).
+
 ## Настройки
 
 Все настройки — в `plugins/PalePlugin/config.yml` (создаётся при первом запуске):

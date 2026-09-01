@@ -1,5 +1,8 @@
 plugins {
     `java-library`
+    // Запуск тестового Paper-сервера: ./gradlew runServer
+    // (требует Gradle 9.7.0+ — wrapper в проекте уже обновлён)
+    id("xyz.jpenilla.run-paper") version "3.1.0"
 }
 
 group = "org.examplee"
@@ -35,4 +38,14 @@ tasks.processResources {
 
 tasks.jar {
     archiveFileName.set("LeperClass.jar")
+}
+
+tasks {
+    runServer {
+        minecraftVersion("1.21.1")
+        // Связка Leper -> Pale (PaleHook вызывает PaleEngine.apiInfect рефлексией):
+        // если PalePlugin уже собран, его jar подхватится в тестовый сервер
+        // (если jar ещё нет — просто пропустится, Leper запустится сам)
+        pluginJars.from(file("../PalePlugin/build/libs/PalePlugin.jar"))
+    }
 }

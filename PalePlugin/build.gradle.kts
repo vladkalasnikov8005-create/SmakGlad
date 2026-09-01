@@ -36,3 +36,12 @@ tasks.processResources {
 tasks.jar {
     archiveFileName.set("PalePlugin.jar")
 }
+
+tasks {
+    runServer {
+        minecraftVersion("1.21.1")
+        // Softdepend в обе стороны: если LeperClass уже собран, его jar
+        // тоже подхватится в тестовый сервер (совместимость на одном сервере)
+        pluginJars.from(file("../LeperClass/build/libs/LeperClass.jar"))
+    }
+}
