@@ -1,0 +1,103 @@
+name: PalePlugin
+version: '1.2'
+main: org.examplee.palePlugin.PalePlugin
+api-version: '1.21'
+softdepend: [LeperClass]
+
+commands:
+  palespread:
+    description: Управление разрастанием бледного леса
+    usage: /palespread <on|off|speed|info|map|give|contract|gui>
+
+permissions:
+  pale.admin:
+    description: Полный доступ ко всем функциям плагина
+    default: op
+    children:
+      pale.command.palespread.*: true
+      pale.use.*: true
+      pale.effect.immune: true
+
+  pale.use.wand:
+    description: Использовать Палочку заразы
+    default: false
+
+  pale.command.palespread.*:
+    description: Все подкоманды /palespread
+    default: false
+    children:
+      pale.command.palespread.control: true
+      pale.command.palespread.speed: true
+      pale.command.palespread.info: true
+      pale.command.palespread.map: true
+      pale.command.palespread.give: true
+      pale.command.palespread.contract: true
+      pale.command.palespread.gui: true
+
+  pale.command.palespread.control:
+    description: /palespread on|off
+    default: false
+
+  pale.command.palespread.speed:
+    description: /palespread speed <1..5000>
+    default: false
+
+  pale.command.palespread.info:
+    description: /palespread info
+    default: false
+
+  pale.command.palespread.map:
+    description: /palespread map [r]
+    default: false
+
+  pale.command.palespread.give:
+    description: /palespread give <salt|holywater|ward|flint|purge|map|wand> <ник> [кол-во] [r/uses]
+    default: false
+
+  pale.command.palespread.contract:
+    description: /palespread contract <start|status|cancel|claim>
+    default: true
+
+  pale.command.palespread.gui:
+    description: /palespread gui
+    default: false
+
+  pale.use.*:
+    description: Все права на использование предметов
+    default: false
+    children:
+      pale.use: true
+      pale.use.salt: true
+      pale.use.holywater: true
+      pale.use.flint: true
+      pale.use.ward: true
+      pale.use.map: true
+      pale.use.wand: true
+
+  pale.use:
+    description: Базовое право на использование предметов (можно выдать одним правом)
+    default: false
+
+  pale.use.salt:
+    description: Использовать Очищающую соль
+    default: false
+
+  pale.use.holywater:
+    description: Использовать Святую воду
+    default: false
+
+  pale.use.flint:
+    description: Использовать Очищающее огниво
+    default: false
+
+  pale.use.ward:
+    description: Ставить/забирать Оберег
+    default: false
+
+  pale.use.map:
+    description: Использовать предмет Карту заражения
+    default: false
+
+  pale.effect.immune:
+    description: Иммунитет к дебаффам заражённых зон
+    default: false

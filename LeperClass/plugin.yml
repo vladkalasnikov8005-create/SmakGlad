@@ -1,0 +1,16 @@
+name: LeperClass
+version: 1.2.0
+main: org.examplee.leperClassPlugin.LeperClassPlugin
+api-version: "1.21"
+softdepend: [PalePlugin]
+
+commands:
+  leper:
+    description: Manage Leper class and blessing
+    usage: /leper add|remove|menu|bless|unbless|sneeze|status|migrateitems
+
+permissions:
+  leper.admin:
+    default: op
+  leper.sneeze:
+    default: op

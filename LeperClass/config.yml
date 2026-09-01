@@ -1,0 +1,26 @@
+balance:
+  infection:
+    phase_minutes: 20
+  contact_infect_per_hp: 0.015
+  contact_fake_scare_chance: 0.20
+  contact_resolve_minutes: 20
+
+  knife:
+    cooldown_minutes: 60
+    fatigue_minutes: 5
+    weak_minutes: 10
+    slow_minutes: 10
+
+  sneeze:
+    cooldown_seconds: 10
+    velocity: 1.15
+    max_distance: 12
+    poison_seconds: 10
+    slow_seconds: 10
+    weak_seconds: 5
+    blind_seconds: 10
+
+  potion_inversion:
+    heal_from_poison: 6.0
+    heal_from_harm: 8.0
+    damage_from_heal: 6.0
