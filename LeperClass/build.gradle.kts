@@ -1,0 +1,38 @@
+plugins {
+    `java-library`
+}
+
+group = "org.examplee"
+version = "1.2.0"
+description = "LeperClass — класс прокажённых: заражение, благословение, чих, зонт, предметы и интеграция с PalePlugin"
+base {
+    archivesName.set("LeperClass")
+}
+
+java {
+    // Сборка на JDK 25
+    toolchain.languageVersion.set(JavaLanguageVersion.of(25))
+}
+
+repositories {
+    mavenCentral()
+    maven("https://repo.papermc.io/repository/maven-public/")
+}
+
+dependencies {
+    compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
+}
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+    // Байткод уровня Java 21 — как в оригинале; работает и на серверах на Java 25
+    options.release.set(21)
+}
+
+tasks.processResources {
+    filteringCharset = "UTF-8"
+}
+
+tasks.jar {
+    archiveFileName.set("LeperClass.jar")
+}
