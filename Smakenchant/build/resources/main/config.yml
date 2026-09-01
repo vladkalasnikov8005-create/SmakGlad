@@ -1,0 +1,281 @@
+# ============================================
+#   Smakenchant — конфигурация зачарований
+# ============================================
+#
+#  Формат для ванильных зачарований (overrides):
+#    <имя_зачарования>:
+#      enabled: true/false           — разрешать ли повышение уровня выше ванильного на наковальне
+#      vanilla-max: N                — стандартный максимальный уровень (для справки)
+#      new-max: M                    — новый максимальный уровень (можно ставить > vanilla-max)
+#      cost-per-extra-level: X       — сколько доп. уровней ОПЫТА стоит каждый уровень сверх ванильного
+#
+#  Все значения можно менять на лету командой /smakenchant reload.
+
+# ==== Зачарование: Многоуровневый прыжок (двойной/тройной) ====
+#  Накладывается только на ботинки, стол зачарований / наковальня.
+#  level 1 = двойной прыжок, level 2 = тройной прыжок.
+multi-jump:
+  enabled: true
+  # Шанс получить это зачарование на столе зачарований (0.0 — никогда, 1.0 — всегда)
+  # Отдельно для каждого уровня:
+  chance-level-1: 0.08    # ~8% шанс при зачаровании ботинок
+  chance-level-2: 0.03    # ~3% шанс
+  # Вес на столе зачарований (как редкость: обычный ~10, редкий ~5, очень редкий ~2)
+  weight: 4
+  # Звук при прыжке (через Registry с фоллбэком)
+  sound: "ENTITY_BREEZE_JUMP"
+  sound-volume: 0.6
+  sound-pitch: 1.4
+  # Отключить прыжок если надета элитра (иначе можно летать как в креативе)
+  disable-when-wearing-elytra: true
+  # Сила ПОДБРАСЫВАНИЯ ВВЕРХ при двойном/тройном прыжке (ванильный прыжок ~0.42)
+  jump-power: 0.5
+  # Дополнительный импульс ВПЕРЁД по направлению взгляда (0 = нет, как обычный прыжок;
+  # 0.2 = лёгкий даш вперёд; 0.4+ = как ракета). 0 РЕКОМЕНДУЕТСЯ чтобы не тормозить бег!
+  forward-boost: 0.0
+
+# ==== Повышение максимального уровня ванильных зачарований ====
+#  Зачарования которых нет в этом списке останутся со стандартным максимумом.
+#  Повышение работает ТОЛЬКО на наковальне (две книги +1 уровня или книга+вещь),
+#  на столе зачарований такие уровни НЕ выпадают.
+overrides:
+
+  protection:
+    enabled: true
+    vanilla-max: 4
+    new-max: 6
+    cost-per-extra-level: 5      # ур.5 = +5 опыта, ур.6 = +10 опыта сверх ванильной стоимости
+
+  fire_protection:
+    enabled: true
+    vanilla-max: 4
+    new-max: 6
+    cost-per-extra-level: 6
+
+  feather_falling:
+    enabled: true
+    vanilla-max: 4
+    new-max: 8
+    cost-per-extra-level: 4
+
+  blast_protection:
+    enabled: true
+    vanilla-max: 4
+    new-max: 6
+    cost-per-extra-level: 6
+
+  projectile_protection:
+    enabled: true
+    vanilla-max: 4
+    new-max: 6
+    cost-per-extra-level: 5
+
+  respiration:
+    enabled: true
+    vanilla-max: 3
+    new-max: 5
+    cost-per-extra-level: 5
+
+  aqua_affinity:
+    enabled: false
+    vanilla-max: 1
+    new-max: 1
+    cost-per-extra-level: 0
+
+  thorns:
+    enabled: true
+    vanilla-max: 3
+    new-max: 5
+    cost-per-extra-level: 8
+
+  depth_strider:
+    enabled: true
+    vanilla-max: 3
+    new-max: 5
+    cost-per-extra-level: 6
+
+  frost_walker:
+    enabled: false
+    vanilla-max: 2
+    new-max: 2
+    cost-per-extra-level: 0
+
+  binding_curse:
+    enabled: false
+    vanilla-max: 1
+    new-max: 1
+    cost-per-extra-level: 0
+
+  sharpness:
+    enabled: true
+    vanilla-max: 5
+    new-max: 8
+    cost-per-extra-level: 7
+
+  smite:
+    enabled: true
+    vanilla-max: 5
+    new-max: 8
+    cost-per-extra-level: 7
+
+  bane_of_arthropods:
+    enabled: true
+    vanilla-max: 5
+    new-max: 8
+    cost-per-extra-level: 6
+
+  knockback:
+    enabled: true
+    vanilla-max: 2
+    new-max: 4
+    cost-per-extra-level: 8
+
+  fire_aspect:
+    enabled: true
+    vanilla-max: 2
+    new-max: 4
+    cost-per-extra-level: 10
+
+  looting:
+    enabled: true
+    vanilla-max: 3
+    new-max: 6
+    cost-per-extra-level: 10
+
+  efficiency:
+    enabled: true
+    vanilla-max: 5
+    new-max: 10
+    cost-per-extra-level: 5
+
+  silk_touch:
+    enabled: false
+    vanilla-max: 1
+    new-max: 1
+    cost-per-extra-level: 0
+
+  unbreaking:
+    enabled: true
+    vanilla-max: 3
+    new-max: 8
+    cost-per-extra-level: 4
+
+  fortune:
+    enabled: true
+    vanilla-max: 3
+    new-max: 6
+    cost-per-extra-level: 10
+
+  power:
+    enabled: true
+    vanilla-max: 5
+    new-max: 8
+    cost-per-extra-level: 7
+
+  punch:
+    enabled: true
+    vanilla-max: 2
+    new-max: 4
+    cost-per-extra-level: 8
+
+  flame:
+    enabled: true
+    vanilla-max: 1
+    new-max: 3
+    cost-per-extra-level: 12
+
+  infinity:
+    enabled: false
+    vanilla-max: 1
+    new-max: 1
+    cost-per-extra-level: 0
+
+  luck_of_the_sea:
+    enabled: true
+    vanilla-max: 3
+    new-max: 6
+    cost-per-extra-level: 8
+
+  lure:
+    enabled: true
+    vanilla-max: 3
+    new-max: 6
+    cost-per-extra-level: 8
+
+  loyalty:
+    enabled: true
+    vanilla-max: 3
+    new-max: 5
+    cost-per-extra-level: 8
+
+  impaling:
+    enabled: true
+    vanilla-max: 5
+    new-max: 8
+    cost-per-extra-level: 7
+
+  riptide:
+    enabled: true
+    vanilla-max: 3
+    new-max: 5
+    cost-per-extra-level: 9
+
+  channeling:
+    enabled: false
+    vanilla-max: 1
+    new-max: 1
+    cost-per-extra-level: 0
+
+  multishot:
+    enabled: true
+    vanilla-max: 1
+    new-max: 3
+    cost-per-extra-level: 15
+
+  quick_charge:
+    enabled: true
+    vanilla-max: 3
+    new-max: 6
+    cost-per-extra-level: 8
+
+  piercing:
+    enabled: true
+    vanilla-max: 4
+    new-max: 8
+    cost-per-extra-level: 6
+
+  mending:
+    enabled: false
+    vanilla-max: 1
+    new-max: 1
+    cost-per-extra-level: 0
+
+  vanishing_curse:
+    enabled: false
+    vanilla-max: 1
+    new-max: 1
+    cost-per-extra-level: 0
+
+  swift_sneak:
+    enabled: true
+    vanilla-max: 3
+    new-max: 5
+    cost-per-extra-level: 10
+
+  wind_burst:
+    enabled: true
+    vanilla-max: 3
+    new-max: 6
+    cost-per-extra-level: 10
+
+  density:
+    enabled: true
+    vanilla-max: 5
+    new-max: 8
+    cost-per-extra-level: 7
+
+  breach:
+    enabled: true
+    vanilla-max: 4
+    new-max: 6
+    cost-per-extra-level: 8

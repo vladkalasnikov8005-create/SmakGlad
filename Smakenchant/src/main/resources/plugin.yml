@@ -1,0 +1,15 @@
+name: Smakenchant
+version: '${version}'
+main: org.examplee.smakenchant.Smakenchant
+api-version: '26.2'
+author: examplee
+description: 'Custom enchantments: multi-jump boots + higher vanilla enchantment caps'
+commands:
+  smakenchant:
+    description: Reload plugin config
+    usage: /smakenchant reload
+    permission: smakenchant.admin
+permissions:
+  smakenchant.admin:
+    description: Reload config
+    default: op
