@@ -1,0 +1,15 @@
+name: GuardianClassPlugin
+version: 1.0.0
+main: org.examplee.guardianClassPlugin.GuardianClassPlugin
+api-version: '1.21'
+author: examplee
+
+commands:
+  guardian:
+    description: Команда класса Хранителя
+    usage: /guardian
+
+permissions:
+  guardian.admin:
+    description: Доступ администратора к инструментам команды guardian
+    default: op
