@@ -1,8 +1,8 @@
 plugins {
     `java-library`
     // Запуск тестового Paper-сервера: ./gradlew runServer
-    // (требует Gradle 9.7.0+ — wrapper в проекте уже обновлён)
-    id("xyz.jpenilla.run-paper") version "3.1.0"
+    // (3.0.2 работает на Gradle 9.4+; если нужен 3.1.0 — поднимите wrapper до 9.7.0)
+    id("xyz.jpenilla.run-paper") version "3.0.2"
 }
 
 group = "org.examplee"
